@@ -11,6 +11,8 @@ elseif L_83_ == 7449423635 then
 end
 
 
+
+
 function CheckLevel()
     local L_120_ = game:GetService("Players").LocalPlayer.Data.Level.Value
     if First_Sea then
@@ -661,7 +663,7 @@ function Tween(L_255_arg0)
         _G.Clip = false
     end
 end
-
+_G.Fast_Delay = 0.17
 local L_88_ = game.Players.LocalPlayer
 local L_89_ = getupvalues(require(L_88_.PlayerScripts.CombatFramework))
 local L_90_ = L_89_[2]
@@ -842,6 +844,15 @@ end
 
 
 
+
+local posX = 10
+local posY = 30
+local posZ = 10
+
+
+
+
+
 while task.wait() do
 
     pcall(function()
@@ -868,7 +879,7 @@ while task.wait() do
                             wait(_G.Fast_Delay)
                             AttackNoCD()
                             bringmob = true
-                            -- AutoHaki()
+                            AutoHaki()
                             EquipTool(SelectWeapon)
                             Tween(L_317_forvar1.HumanoidRootPart.CFrame * CFrame.new(posX, posY, posZ))
                             L_317_forvar1.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
